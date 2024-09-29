@@ -658,7 +658,7 @@ body::-webkit-scrollbar-thumb
     top: 64px; /* Adjust this value as needed to move the content down */
     left: 30;
     padding: 0;
-    width: 30%; /* Full width for the line */
+    width: 20%; /* Full width for the line */
     height: 2px; /* Height of the line */
     background-color: black; /* Black line color */
     z-index: 0;  /* Ensure the line is below the title content */
