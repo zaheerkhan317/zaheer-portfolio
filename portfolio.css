@@ -847,9 +847,9 @@ body::-webkit-scrollbar-thumb
 
 	.skills .skills-content .right .php::before {
          width: 70%;
-         animation: java 2s;
+         animation: php 2s;
      }
-     @keyframes java {
+     @keyframes php {
          0% {
              width: 0%;
          }
@@ -858,11 +858,37 @@ body::-webkit-scrollbar-thumb
          }
      }
 
+     .skills .skills-content .right .reactjs::before {
+        width: 70%;
+        animation: reactjs 2s;
+    }
+    @keyframes reactjs {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 70%;
+        }
+    }
+
+    .skills .skills-content .right .firebase::before {
+        width: 60%;
+        animation: firebase 2s;
+    }
+    @keyframes reactjs {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 60%;
+        }
+    }
+
 	.skills .skills-content .right .django::before {
          width: 60%;
-         animation: java 2s;
+         animation: django 2s;
      }
-     @keyframes java {
+     @keyframes django {
          0% {
              width: 0%;
          }
@@ -1332,6 +1358,7 @@ body::-webkit-scrollbar-thumb
         }
 
         .services .title::before,
+        .freelance-projects .title::before,
 .skills .title::before,
 .freelance-projects .title::before,
 .contact .title::before {
@@ -1343,7 +1370,6 @@ body::-webkit-scrollbar-thumb
 
 .services .title::after,
 .skills .title::after,
-.freelance-projects .title::after,
 .contact .title::after {
     background: #111;
     content: "what i provide";
@@ -1352,6 +1378,14 @@ body::-webkit-scrollbar-thumb
     top: 10px; /* Adjust the value to move it down */
 }
 
+
+.freelance-projects .title::after {
+    background: #111;
+    content: "what i had done";
+    display: block; /* Ensure it is displayed as a block */
+    position: relative; /* Set the position to relative */
+    top: 10px; /* Adjust the value to move it down */
+}
         .services .serv-content .card,
         .freelance-projects .freelance-content .card, 
         .projects .pro-content .card,
