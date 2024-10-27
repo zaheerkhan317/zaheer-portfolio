@@ -195,7 +195,7 @@ body::-webkit-scrollbar-thumb
      bottom: 10px;
      text-align: center;
      line-height: 45px;
-     color: #fff;
+     color: #000;
      z-index: 9999;
      font-size: 30px;
      border-radius: 50%;
@@ -1169,7 +1169,8 @@ body::-webkit-scrollbar-thumb
         border-radius: 50px;
      }
      footer span a {
-         color: #ffe600;
+         color: #d6bb22;
+         font-weight: 600;
          text-decoration: none;
      }
      footer span a:hover {
