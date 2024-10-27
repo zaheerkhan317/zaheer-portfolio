@@ -24,7 +24,7 @@ body::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #68d388;
+	background-color: #ffe600;
 }
 
 
@@ -51,8 +51,8 @@ body::-webkit-scrollbar-thumb
  
  .navbar.sticky {
      padding: 10px 0;
-     background: #68d388;
-     border: 3px solid #68d388;
+     background: #ffe600;
+     border: 3px solid #ffe600;
      border-radius: 45px 45px 45px 45px;
  }
  
@@ -82,21 +82,25 @@ body::-webkit-scrollbar-thumb
  }
  
  .navbar .logo span {
-     color: #68d388;
+     color: #ffe600;
      font-size: 35px;
      font-family: 'Ubuntu', sans-serif;
      font-weight: 600;
  }
  
- .navbar.sticky .logo a span {
+ .navbar.sticky .logo a {
      color: #111;
  }
+
+ .navbar.sticky .logo a span {
+    color: #fff;
+}
  
  .navbar .menu li {
      list-style: none;
      display: inline-block;
      position: relative;
-     color: #68d388;
+     color: #ffe600;
  }
  
  .navbar .menu li a {
@@ -108,6 +112,16 @@ body::-webkit-scrollbar-thumb
      margin-left: 25px;
      transition: transform 0.4s ease;
  }
+
+ .navbar.sticky .menu li a {
+    text-decoration: none;
+    display: block;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: transform 0.4s ease;
+}
  
  .navbar .menu li a::before {
      content: "";
@@ -123,17 +137,34 @@ body::-webkit-scrollbar-thumb
      transition: transform 0.4s ease;
      transform: scale(0, 1);
  }
+
+ .navbar.sticky .menu li a::before {
+    content: "";
+    display: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    color: #000;
+    text-align: center;
+    justify-content: center;
+    top: 25px;
+    background-color: #111;
+    position: absolute;
+    transition: transform 0.4s ease;
+    transform: scale(0, 1);
+}
+
  
  .navbar .menu li a:hover {
      transform: scale(1, 1);
-     color: #68d388;
+     color: #ffe600;
      transition: transform 0.4s ease-in-out;
  }
  
  .navbar .menu li a:hover::before {
      transform: scale(1, 1);
      width: 100%;
-     background-color: #68d388;
+     background-color: #ffe600;
      transition: transform 0.4s ease;
  }
  
@@ -159,7 +190,7 @@ body::-webkit-scrollbar-thumb
      position: fixed;
      height: 45px;
      width: 42px;
-     background: #68d388;
+     background: #ffe600;
      right: 30px;
      bottom: 10px;
      text-align: center;
@@ -200,7 +231,7 @@ body::-webkit-scrollbar-thumb
  }
  
  .home .home-content .text-2 {
-     color: #68d388;
+     color: #ffe600;
      font-size: 75px;
      font-weight: 600;
      margin-left: -3px;
@@ -212,14 +243,15 @@ body::-webkit-scrollbar-thumb
  }
  
  .home .home-content .text-3 span {
-     color: #68d388;
+     color: #ffe600;
      font-weight: 500;
  }
  
  .home .home-content a {
      display: inline-block;
-     color: #fff;
+     color: #000;
      font-size: 25px;
+     font-weight: 600;
      padding: 7px 25px;
      margin-top: 20px;
      border-radius: 3px 20px 3px 20px;
@@ -227,15 +259,15 @@ body::-webkit-scrollbar-thumb
  }
  
  .home .home-content a:hover {
-     color: #68d388;
+     color: #ffe600;
  }
  /* button styling */
  
  .button {
      margin: 0 10px 20px;
      background-color: #333;
-     background: #68d388;
-     border: 2px solid #68d388;
+     background: #ffe600;
+     border: 2px solid #ffe600;
      border-radius: 3px 25px 3px 25px;
      color: #fff;
      margin-left: 0;
@@ -364,7 +396,7 @@ body::-webkit-scrollbar-thumb
      bottom: -12px;
      left: 50%;
      font-size: 20px;
-     color: #68d388;
+     color: #ffe600;
      padding: 5px;
      background: #fff;
      transform: translateX(-50%);
@@ -383,7 +415,7 @@ body::-webkit-scrollbar-thumb
      height: 400px;
      width: 400px;
      object-fit: cover;
-     border: 7px solid #68d388;
+     border: 7px solid #ffe600;
      border-radius: 50%;
  }
  
@@ -398,7 +430,7 @@ body::-webkit-scrollbar-thumb
  }
  
  .about .about-content .right .text span {
-     color: #68d388;
+     color: #ffe600;
  }
  
  .about .about-content .right p {
@@ -414,22 +446,50 @@ body::-webkit-scrollbar-thumb
  }
  
  .about .about-content .right a {
-     display: inline-block;
-     background: #68d388;
-     color: #fff;
-     font-size: 20px;
-     font-weight: 500;
-     padding: 10px 30px;
-     margin-top: 20px;
-     border-radius: 3px 20px 3px 20px;
-     border: 2px solid #68d388;
-     transition: all 0.4s ease;
- }
- 
- .about .about-content .right a:hover {
-     color: #68d388;
-     background: #fff;
- }
+    position: relative; /* Set position relative to the anchor */
+    display: inline-block;
+    background: #ffe600; /* Button background color */
+    color: #000; /* Text color */
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 3px 20px 3px 20px;
+    border: 2px solid #ffe600; /* Border color */
+    text-transform: uppercase; /* Uppercase text */
+    text-decoration: none; /* No underline */
+    overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+}
+
+/* Pseudo-element for hover effect */
+.about .about-content .right a::before {
+    content: ""; /* Required for pseudo-element */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    width: 100%; /* Width of the pseudo-element */
+    height: 0; /* Start with height of 0 */
+    background: #000; /* Background color for the hover effect */
+    transform: translate(-50%, -50%) rotate(125deg); /* Center and rotate */
+    transition: height 0.4s ease; /* Transition for height */
+    z-index: 0; /* Place it behind the text */
+}
+
+/* Change text color on hover */
+.about .about-content .right a:hover {
+    color: #ffe600; /* Change text color */
+}
+
+/* Scale the pseudo-element on hover */
+.about .about-content .right a:hover::before {
+    height: 400%; /* Expand height on hover */
+}
+
+.about .about-content .right a span {
+    position: relative; /* Position span relative for layering */
+    z-index: 1; /* Ensure the text is above the pseudo-element */
+}
+
  /* services styling */
  
  .services,
@@ -459,16 +519,16 @@ body::-webkit-scrollbar-thumb
      width: calc(100% - 20px);
      background: #222;
      text-align: center;
-     border: 2px solid #68d388;
+     border: 2px solid #ffe600;
      border-radius: 0px 30px 0px 30px;
      padding: 20px 25px;
      cursor: pointer;
      transition: all 0.4s ease;
  }
  
- .services .serv-content .card:hover {
-     background: #68d388;
- }
+ /* .services .serv-content .card:hover {
+     background: #ffe600;
+ } */
  
  .services .serv-content .card .box {
      transition: all 0.4s ease;
@@ -478,7 +538,7 @@ body::-webkit-scrollbar-thumb
      transform: scale(1.05)
  }
  /* .services .serv-content .card .box .text{
-    color: #68d388;
+    color: #ffe600;
 }
 
 .services .serv-content .card .box .text:hover{
@@ -487,14 +547,14 @@ body::-webkit-scrollbar-thumb
  
  .serv-content .card i {
      font-size: 50px;
-     color: #68d388;
+     color: #ffe600;
      transition: color 0.4s ease;
  }
 
 
  .serv-content .card .box img {
     font-size: 50px;
-    color: #68d388;
+    color: #ffe600;
     transition: color 0.4s ease;
 }
 
@@ -507,7 +567,7 @@ body::-webkit-scrollbar-thumb
 
  
  .services .serv-content .card:hover i {
-     color: #fff;
+     color: #ffe600;
  }
 
  
@@ -515,6 +575,7 @@ body::-webkit-scrollbar-thumb
  .services .serv-content .card .text {
      font-size: 30px;
      font-weight: 500;
+     color: #ffe600;
      margin: 10px 0 7px 0;
  }
  /* services styling */
@@ -530,7 +591,7 @@ body::-webkit-scrollbar-thumb
  .projects .pro-content .card {
          width: calc(100% - 20px);
          text-align: center;
-         border: 2px solid #68d388;
+         border: 2px solid #ffe600;
          border-radius: 0px 30px 0px 30px;
          padding: 20px 25px;
          cursor: pointer;
@@ -539,9 +600,9 @@ body::-webkit-scrollbar-thumb
      .projects .pro-content .card a{
          color: black;
      }
-     .projects .pro-content .card:hover {
-         background: #68d388;
-     }
+     /* .projects .pro-content .card:hover {
+         background: #ffe600;
+     } */
      .projects .pro-content .card .box {
          transition: all 0.4s ease;
      }
@@ -549,7 +610,7 @@ body::-webkit-scrollbar-thumb
          transform: scale(1.05)
      }
      /* .projects .pro-content .card .box .text{
-    color: #68d388;
+    color: #ffe600;
 }
 
 .projects .pro-content .card .box .text:hover{
@@ -557,11 +618,11 @@ body::-webkit-scrollbar-thumb
 } */
      .projects .pro-content .card i {
          font-size: 50px;
-         color: #68d388;
+         color: #ffe600;
          transition: color 0.4s ease;
      }
      .projects .pro-content .card:hover i {
-         color: #fff;
+         color: #ffe600;
      }
      .projects .pro-content .card .text {
          font-size: 30px;
@@ -590,7 +651,7 @@ body::-webkit-scrollbar-thumb
     .freelance-projects .freelance-content .card {
         width: calc(100% - 20px);
         text-align: center;
-        border: 2px solid #68d388; /* Change color as needed */
+        border: 2px solid #ffe600; /* Change color as needed */
         border-radius: 0px 30px 0px 30px;
         padding: 20px 25px;
         cursor: pointer;
@@ -599,22 +660,26 @@ body::-webkit-scrollbar-thumb
     .freelance-projects .freelance-content .card a {
         color: #fff;
     }
-    .freelance-projects .freelance-content .card:hover {
-        background: #68d388; /* Change hover color as needed */
+    /* .freelance-projects .freelance-content .card:hover {
+        background: #ffe600;
     }
-    .freelance-projects .freelance-content .card .box {
+     */
+     .freelance-projects .freelance-content .card .box{
         transition: all 0.4s ease;
+    }
+    .freelance-projects .freelance-content .card .box .text{
+        color: #ffe600;
     }
     .freelance-projects .freelance-content .card:hover .box {
         transform: scale(1.05);
     }
     .freelance-projects .freelance-content .card i {
         font-size: 50px;
-        color: #68d388; /* Change icon color as needed */
+        color: #ffe600; /* Change icon color as needed */
         transition: color 0.4s ease;
     }
     .freelance-projects .freelance-content .card:hover i {
-        color: #fff;
+        color: #ffe600;
     }
     .freelance-projects .freelance-content .card .text {
         font-size: 30px;
@@ -667,7 +732,7 @@ body::-webkit-scrollbar-thumb
 .testimonials .testimonial-content .card {
     width: calc(100% - 20px);
     text-align: center;
-    border: 2px solid #68d388;
+    border: 2px solid #ffe600;
     border-radius: 0px 30px 0px 30px;
     padding: 20px 25px;
     cursor: pointer;
@@ -679,9 +744,9 @@ body::-webkit-scrollbar-thumb
     color: black;
 }
 
-.testimonials .testimonial-content .card:hover {
-    background: #68d388;
-}
+/* .testimonials .testimonial-content .card:hover {
+    background: #ffe600;
+} */
 
 .testimonials .testimonial-content .card .box {
     transition: all 0.4s ease;
@@ -693,22 +758,23 @@ body::-webkit-scrollbar-thumb
 
 .testimonials .testimonial-content .card i {
     font-size: 50px;
-    color: #68d388;
+    color: #ffe600;
     transition: color 0.4s ease;
 }
 
 .testimonials .testimonial-content .card:hover i {
-    color: #fff;
+    color: #ffe600;
 }
 
 .testimonials .testimonial-content .card .text {
+    color: #ffe600;
     font-size: 30px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
 
 .testimonials .testimonial-content .card:hover .text {
-    color: #fff;
+    color: #ffe600;
 }
    /* Testimonials Styling */
 
@@ -720,6 +786,7 @@ body::-webkit-scrollbar-thumb
          width: calc(50% - 30px);
      }
      .skills .skills-content .left .text {
+        color: #ffe600;
          font-size: 30px;
          font-weight: 600;
          margin-bottom: 10px;
@@ -730,18 +797,18 @@ body::-webkit-scrollbar-thumb
      }
      .skills .skills-content .left a {
          display: inline-block;
-         background: #68d388;
+         background: #ffe600;
          color: #fff;
          font-size: 18px;
          font-weight: 500;
          padding: 8px 16px;
          margin-top: 20px;
          border-radius: 3px 20px 3px 20px;
-         border: 2px solid #68d388;
+         border: 2px solid #ffe600;
          transition: all 0.4s ease;
      }
      .skills .skills-content .left a:hover {
-         color: #68d388;
+         color: #ffe600;
          background: none;
      }
      .skills .skills-content .right .bars {
@@ -769,7 +836,7 @@ body::-webkit-scrollbar-thumb
          position: absolute;
          height: 100%;
          left: 0;
-         background: #68d388;
+         background: #ffe600;
      }
      .skills .skills-content .right .c::before {
          width: 80%;
@@ -901,7 +968,7 @@ body::-webkit-scrollbar-thumb
          content: "where i studied";
      }
      .education .carousel .card {
-         border: 2px solid #68d388;
+         border: 2px solid #ffe600;
          border-radius: 0px 30px 0px 30px;
          padding: 25px 35px;
          text-align: center;
@@ -910,16 +977,16 @@ body::-webkit-scrollbar-thumb
 
      .education .carousel .card i {
         font-size: 50px;
-        color: #68d388;
+        color: #ffe600;
     }
 
 
-     .education .carousel .card:hover {
-         background: #68d388;
-     }
+     /* .education .carousel .card:hover {
+         background: #ffe600;
+     } */
 
      .education .carousel .card:hover i{
-        color: #fff;
+        color: #ffe600;
     }
      .education .carousel .card .box {
          display: flex;
@@ -928,9 +995,14 @@ body::-webkit-scrollbar-thumb
          justify-content: center;
      }
      .education .carousel .card:hover .box {
+        transition: all 0.4s ease;
+    }
+    
+     .education .carousel .card:hover .box {
          transform: scale(1.05);
      }
      .education .carousel .card .text {
+        color: #ffe600;
          font-size: 25px;
          font-weight: 500;
          margin: 10px 0 7px 0;
@@ -954,7 +1026,7 @@ body::-webkit-scrollbar-thumb
          margin: 0 5px;
          outline: none!important;
          border-radius: 50%;
-         border: 2px solid #68d388!important;
+         border: 2px solid #ffe600!important;
          transition: all 0.3s ease;
      }
      .owl-dot.active {
@@ -963,7 +1035,7 @@ body::-webkit-scrollbar-thumb
      }
      .owl-dot.active,
      .owl-dot:hover {
-         background: #68d388!important;
+         background: #ffe600!important;
      }
      /* contact section styling */
      .contact .title::after {
@@ -994,7 +1066,7 @@ body::-webkit-scrollbar-thumb
      }
      .contact .contact-content .row i {
          font-size: 25px;
-         color: #68d388;
+         color: #ffe600;
      }
      .contact .contact-content .info .head {
          font-weight: 500;
@@ -1047,7 +1119,7 @@ body::-webkit-scrollbar-thumb
      .contact .right form .button .send-btn{
         width: 100%;
         height: 100%;
-        border: 1px solid #68d388;
+        border: 1px solid #ffe600;
         background: #0000;
         font-size: 20px;
         font-weight: 500;
@@ -1060,9 +1132,9 @@ body::-webkit-scrollbar-thumb
      .contact .right form .button .send-btn:hover{
          width: 100%;
          height: 100%;
-         border: 1px solid #68d388;
+         border: 1px solid #ffe600;
          background: #000;
-         color: #68d388;
+         color: #ffe600;
          font-size: 20px;
          font-weight: 500;
          cursor: pointer;
@@ -1097,7 +1169,7 @@ body::-webkit-scrollbar-thumb
         border-radius: 50px;
      }
      footer span a {
-         color: #68d388;
+         color: #ffe600;
          text-decoration: none;
      }
      footer span a:hover {

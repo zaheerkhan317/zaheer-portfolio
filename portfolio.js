@@ -97,7 +97,7 @@ function sendmail(name, email, msg) {
     emailjs.send("service_5aw59qk", "template_01jbcel", {
         from_name: name,
         from: email,
-        to_name: "gousezahir100@gmail.com", // Set the 'to' address to your desired recipient
+        to_name: "khan", // Set the 'to' address to your desired recipient
         message: msg,
         reply_to: email // Set the 'from' address
     }).then(function(response) {
