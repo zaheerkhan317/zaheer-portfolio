@@ -707,7 +707,7 @@ body::-webkit-scrollbar-thumb
 }
 
 .testimonials .title::after {
-    content: "clients feedback";
+    content: "my blogs";
 }
 
 .testimonials .owl-carousel {
